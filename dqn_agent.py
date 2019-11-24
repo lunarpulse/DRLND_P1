@@ -29,7 +29,7 @@ class Agent():
             action_size (int): dimension of each action
             seed (int): random seed
         """
-        print ("Architecture: " + str(network) + " " + str(stepkey) + " DQN")
+        print ("Architecture: " + str(network) + " " + str(stepkey) + " QN")
         self.stepkey = stepkey
         self.state_size = state_size
         self.action_size = action_size
@@ -127,22 +127,12 @@ class Agent():
         # Get index of maximum value for next state from Q_expected
         Q_argmax = self.qnetwork_local(next_states).detach()
         _, a_prime = Q_argmax.max(1)
-        #print (self.qnetwork_local(states).detach())
-        #print (Q_argmax)
-        #print (Q_argmax.shape)
-        #input("Press Enter to continue...")
         # Get max predicted Q values (for next states) from target model
         Q_targets_next = self.qnetwork_target(next_states).detach().gather(1, a_prime.unsqueeze(1))
-        #print (Q_targets_next.shape)
-        #print (Q_targets_next)
-        #input("Press Enter to continue...")
         # Compute Q targets for current states 
         Q_targets = rewards + (gamma * Q_targets_next * (1 - dones))
-        #print (Q_targets.shape)
         # Get expected Q values from local model
         Q_expected = self.qnetwork_local(states).gather(1, actions)
-        #print (Q_expected.shape)
-        #input("Press Enter to continue...")
         # Compute loss
         loss = F.mse_loss(Q_expected, Q_targets)
         # Minimize the loss
