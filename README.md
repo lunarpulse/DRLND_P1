@@ -1,10 +1,10 @@
 [//]: # (Image References)
 
-[image1]: https://user-images.githubusercontent.com/10624937/43851024-320ba930-9aff-11e8-8493-ee547c6af349.gif "Trained Agent"
-[image2]: https://user-images.githubusercontent.com/10624937/43851646-d899bf20-9b00-11e8-858c-29b5c2c94ccc.png "Crawler"
+[image1]: https://user-images.githubusercontent.com/10624937/42135619-d90f2f28-7d12-11e8-8823-82b970a54d7e.gif "Banana Seeker"
 
-# Continuous Control
-### Introduction
+# Discrete state control
+
+## Introduction
 
 For this project, you will train an agent to navigate (and collect bananas!) in a large, square world.  
 
@@ -13,6 +13,7 @@ For this project, you will train an agent to navigate (and collect bananas!) in 
 A reward of +1 is provided for collecting a yellow banana, and a reward of -1 is provided for collecting a blue banana.  Thus, the goal of your agent is to collect as many yellow bananas as possible while avoiding blue bananas.  
 
 The state space has 37 dimensions and contains the agent's velocity, along with ray-based perception of objects around agent's forward direction.  Given this information, the agent has to learn how to best select actions.  Four discrete actions are available, corresponding to:
+
 - **`0`** - move forward.
 - **`1`** - move backward.
 - **`2`** - turn left.
@@ -20,7 +21,7 @@ The state space has 37 dimensions and contains the agent's velocity, along with 
 
 The task is episodic, and in order to solve the environment, your agent must get an average score of +13 over 100 consecutive episodes.
 
-### Prerequisites
+## Prerequisites
 
 1. Please first setup a Python3 [Anaconda](https://www.anaconda.com/download) environment.
 1. Then install the requirements for the project through:
@@ -78,4 +79,4 @@ pip install
 
 1. Place the file in the DRLND GitHub repository, in the root of this repository, and unzip (or decompress) the file.
 
-1. Refer the notebook `Continuous_Control-DDPG.ipynb` for using Deep Deterministic Policy Gradient (DDPG).
+1. Refer the notebook `Report.ipynb` for using DDQN.
