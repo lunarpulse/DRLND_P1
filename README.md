@@ -79,4 +79,10 @@ pip install
 
 1. Place the file in the DRLND GitHub repository, in the root of this repository, and unzip (or decompress) the file.
 
-1. Refer the notebook `Report.ipynb` for using DDQN.
+1. Refer the notebook `Report.ipynb` for using DDQN report.
+
+1. non-notebook version
+
+```bash
+python Nav.py
+```
