@@ -2,7 +2,7 @@ from unityagents import UnityEnvironment
 import numpy as np
 
 
-from dqn_agent import Agent
+from dqn_PER import Agent
 from collections import deque
 import torch
 import matplotlib.pyplot as plt
