@@ -33,7 +33,6 @@ class DuelingDQNetwork(nn.Module):
         self.hidden_layers.extend([nn.Linear(h1, h2) for h1, h2 in layer_sizes])
         self.v_layer = nn.Linear(hidden_layer_sizes[-1], 1)
         self.adv_layer = nn.Linear(hidden_layer_sizes[-1], action_size)
-#         self.output = nn.Linear(hidden_layer_sizes[-1], action_size)
 
     def forward(self, x):
         """Build a network that maps state -> action values."""
@@ -42,7 +41,6 @@ class DuelingDQNetwork(nn.Module):
         v = self.v_layer(x)
         adv = self.adv_layer(x)
         x = v + adv - adv.mean()
-#         x = self.output(x)
         return x
 
 class DuelingDQNAgent(object):
