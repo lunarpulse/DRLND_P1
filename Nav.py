@@ -43,7 +43,7 @@ def train(number_of_episodes = 2000, max_timesteps = 1000, e_greedy_start = 1.0,
             break 
     return scores
 
-env = UnityEnvironment(file_name="/home/lunarpulse/Documents/DRLND/deep-reinforcement-learning/p1_navigation/Banana_Linux/Banana.x86_64")
+env = UnityEnvironment(file_name="./Banana_Linux/Banana.x86_64")
 
 # get the default brain
 brain_name = env.brain_names[0]
